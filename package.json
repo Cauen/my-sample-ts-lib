@@ -1,0 +1,24 @@
+{
+  "name": "my-sample-ts-lib",
+  "version": "1.0.2",
+  "description": "My npm package written in TS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "publish": "cd dist && npm publish",
+    "compile": "tsc",
+    "clean": "rimraf dist",
+    "prebuildpackage": "npm run clean && npm run compile && node dist/SetupPackage.js",
+    "buildpackage": "cd dist && npm pack"
+  },
+  "author": "Cameron Nokes",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.4",
+    "rimraf": "^3.0.2"
+  }
+}
